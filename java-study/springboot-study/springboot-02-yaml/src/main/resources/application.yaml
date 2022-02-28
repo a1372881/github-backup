@@ -1,0 +1,25 @@
+person:
+  userName: zhangsan
+  boss: false
+  birth: 2021/23/12 24:2:33
+  age: 17
+  pet:
+    name: miao
+    weight: 11.1
+  interests: [足球,排球]
+  animle:
+    - jerry
+    - mario
+  score:
+    english:
+      first: 22
+      second: 55
+      third: 99
+    math: [131,140,148]
+    chinese: {first: 128,second: 138}
+  salarys: [23333,55555,67778.22]
+  allPets:
+    sick:
+      - {name: tom}
+      - {name: jerry,weight: 47}
+    helth: [{name: mario,weight: 47}]

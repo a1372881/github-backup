@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="db.properties">
+    </properties>
+
+    <settings>
+<!--默认不需要配置的日志  <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+
+    <typeAliases>
+        <package name="com.dida.pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+<!--设置类型为JDBC-->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+<!--映射xml文件的位置-->
+    <mappers>
+        <mapper resource="com/dida/dao/UserMapper.xml"/>
+<!--        <mapper class="com.dida.dao.UserMapper"/>-->
+<!--        <package name="com.dida.dao"/>-->
+    </mappers>
+</configuration>

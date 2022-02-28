@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON_dida</title>
+</head>
+<body>
+<script type="text/javascript">
+    var user = {
+        name:"dida",
+        age:3,
+        sex:"男"
+    };
+
+    var str = JSON.stringify(user);
+    console.log(str);
+
+    var user2 = JSON.parse(str);
+    console.log(user2.age,user2.name,user2.sex);
+</script>
+</body>
+</html>

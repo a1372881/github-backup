@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "mycar",
+      "type": "com.dida.boot.pojo.Car",
+      "sourceType": "com.dida.boot.pojo.Car"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mycar.brand",
+      "type": "java.lang.String",
+      "sourceType": "com.dida.boot.pojo.Car"
+    },
+    {
+      "name": "mycar.price",
+      "type": "java.lang.Integer",
+      "sourceType": "com.dida.boot.pojo.Car"
+    }
+  ],
+  "hints": []
+}

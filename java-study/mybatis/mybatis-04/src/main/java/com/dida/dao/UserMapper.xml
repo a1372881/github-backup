@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--命名空间-->
+<mapper namespace="com.dida.dao.UserMapper">
+    <resultMap id="test" type="user">
+<!--property数据库中的字段名 column 实体类中的字段名 -->
+        <result property="pwd" column="password"/>
+    </resultMap>
+<!--id 是接口中定义的方法 返回类型是数据库的实体类-->
+    <select id="getUserList" resultMap="test">
+        select * from mybatis.mybatis;
+    </select>
+
+
+<!--使用limit分页-->
+    <select id="uselimit" parameterType="map" resultType="user">
+        select * from mybatis limit #{start},#{page}
+    </select>
+
+
+<!--使用Rowbounds分页-->
+    <select id="Rowbounds" resultType="user">
+        select * from mybatis.mybatis;
+    </select>
+
+</mapper>
